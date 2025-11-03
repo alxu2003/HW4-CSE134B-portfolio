@@ -1,31 +1,56 @@
 @import url('semantics.css');
 
+html {
+    font-family: var(--font-family, 'Roboto', 'sans-serif');
+}
 h1, h2, p {
-    font-family: var(--font-family);
-    color: var(--text-color);
+    color: var(--text-color,#121313);
 }
 
 h1 {
-    font-size: calc(3*var(--font-size-base));
+    font-size: calc(3*var(--font-size-base,1rem));
     font-weight: 400;
 }
 
 h2 {
-    font-size: calc(2*var(--font-size-base));
+    margin: 0px;
+    font-size: calc(2*var(--font-size-base,1rem));
     font-weight: 400;
 }
 
 p {
-    font-size: var(--font-size-base);
+    margin: 0px;
+    font-size: var(--font-size-base,1rem);
 }
 
 .white-text {
-    color: var(--text-color-white);
+    color: var(--text-color-white,#FFFFFF);
 }
 
 .supporting-text {
-    font-size: calc(0.875*var(--font-size-base));
-    color: var(--text-color-supporting);
-    text-transform: uppercase
+    font-size: calc(0.875*var(--font-size-base,1rem));
+    color: var(--text-color-supporting,#636060);
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
 }
 
+a {
+    color: inherit;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-column-gap: var(--width-spacing-unit,1.6dvw);
+    grid-row-gap: calc(2*var(--height-spacing-unit,1.6dvh));
+}
+
+.flex-container {
+    padding-block: var(--height-spacing-unit,1.6dvh);
+    display: flex;
+    column-gap: calc(2*var(--width-spacing-unit,1.6dvw));
+    row-gap: var(--height-spacing-unit,1.6dvh);
+}
+
+.flex-item {
+    flex: 1;
+}
