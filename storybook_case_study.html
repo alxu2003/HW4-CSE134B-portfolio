@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Alex Xu's Portfolio</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="portfolio.css">
     <style>
-      /* Add some style stuff */
+    
     </style>
   </head>
   <body>
-    <nav>
+    <nav class = "navbar">
       <button> 
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M4 8H28V10.6667H4V8ZM4 14.6667H28V17.3333H4V14.6667ZM4 21.3333H28V24H4V21.3333Z" fill="#121313"/>
@@ -22,55 +23,58 @@
           <li><a href="experiment.html">Experiments</a></li>
         </ul>
     </nav>
-    <header>
-      <picture>
-        <source srcset="/images/storybook/StorybookBanner.png 2x"/>
-        <img src="/images/storybook/StorybookThumb.png" alt="storybook thumbnail" />
-      </picture>
-
-      <hgroup>
-        <h1>Bridging design and development</h1>
-        <h2>Arity, an Allstate Company</h2>
-      </hgroup>
-      <section id="goal">
-        <h3>Goal</h3>
-        <p>Keeping developers updated on the latest<br>changes to the Arity Web Foundations.</p>
-      </section>
-      <section id="skills">
-        <h3>Skills</h3>
-        <p>React/Typescript<br>Github<br>Figma<br>Storybook</p>
-      </section>
-      <section id="deliverable">
-        <h3>Deliverable</h3>
-        <p>ColorPalette page<br>Typography page</p>
-      </section>
-      <section id="time-spent">
-        <h3>Time spent</h3>
-        <p>About 2 weeks</p>
-      </section>
-    </header>
-    <main>
-      <section>
-        <p>Storybook is an open-source tool for developing, documenting, and testing UI components in isolation. It’s widely used in frontend development to create a <i>living style guide</i> of components, making it easier for teams to build consistent, reusable, and well-documented design systems. I was tasked with ensuring design-to-dev alignment by updating the Storybook with the new Colors and Type from Arity’s design system.</p>
-        <strong>This was a solo project.</strong>
-      </section>
+    <div class="content">
       <figure>
-        <img src="/images/storybook/ColorPalettePage.png" alt="Storybook ColorPalette page" width="400" />
-        <figcaption>
-          <b>Arity Colors</b>
-          <p>I created the Colors page using MD and JS with some HTML/CSS, making sure colors on the 900 to 100 scale were comparable vertically.</p>
-          <em>Created by me</em>
-        </figcaption>
+        <picture>
+          <source srcset="/images/storybook/StorybookBanner-2x.png" media="(width >= 2880px)"/>
+          <img src="/images/storybook/StorybookBanner-1x.png" alt="storybook banner" />
+        </picture>
+        <header>
+          <hgroup>
+            <h1>Bridging design and development</h1>
+            <h2>Arity, an Allstate Company</h2>
+          </hgroup>
+          <section id="goal">
+            <h3>Goal</h3>
+            <p>Keeping developers updated on the latest changes to the Arity Web Foundations.</p>
+          </section>
+          <section id="skills">
+            <h3>Skills</h3>
+            <p>React/Typescript<br>Github<br>Figma<br>Storybook</p>
+          </section>
+          <section id="deliverable">
+            <h3>Deliverable</h3>
+            <p>ColorPalette page<br>Typography page</p>
+          </section>
+          <section id="time-spent">
+            <h3>Time spent</h3>
+            <p>About 2 weeks</p>
+          </section>
+        </header>
       </figure>
-    </main>
-    <footer>
-      <nav>
-        <ul>
-          <li><a href="/images/AlexXuResume2025.pdf" target="_blank">Resume</a></li>
-          <li><a href="https://www.linkedin.com/in/alex-liaoxing-xu/" target="_blank">Linkedin</a></li>
-          <li><a href="mailto:alxu2003@gmail.com">Email</a></li>
-        </ul>
-      </nav>
-    </footer>
+      <main>
+        <section>
+          <p>Storybook is an open-source tool for developing, documenting, and testing UI components in isolation. It’s widely used in frontend development to create a <i>living style guide</i> of components, making it easier for teams to build consistent, reusable, and well-documented design systems. I was tasked with ensuring design-to-dev alignment by updating the Storybook with the new Colors and Type from Arity’s design system.</p>
+          <strong>This was a solo project.</strong>
+        </section>
+        <figure>
+          <img src="/images/storybook/ColorPalettePage.png" alt="Storybook ColorPalette page" width="400" />
+          <figcaption>
+            <b>Arity Colors</b>
+            <p>I created the Colors page using MD and JS with some HTML/CSS, making sure colors on the 900 to 100 scale were comparable vertically.</p>
+            <em>Created by me</em>
+          </figcaption>
+        </figure>
+      </main>
+      <footer>
+        <nav>
+          <ul>
+            <li><a href="/images/AlexXuResume2025.pdf" target="_blank">Resume</a></li>
+            <li><a href="https://www.linkedin.com/in/alex-liaoxing-xu/" target="_blank">Linkedin</a></li>
+            <li><a href="mailto:alxu2003@gmail.com">Email</a></li>
+          </ul>
+        </nav>
+      </footer>
+    </div>
   </body>
 </html>
