@@ -1,21 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroller">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Alex Xu's Portfolio</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="mobile.css" />
+    <link rel="stylesheet" media="screen and (min-width: 769px) and (max-width: 1024px)" href="tablet.css" />
+    <link rel="stylesheet" media="screen and (min-width: 1025px)" href="desktop.css" />
     <style>
-      header {
-        height: 37.5vh;
-      }
       article {
         display: inline-flex;
         flex-direction: column;
         row-gap: 16px;
         align-items: left;
+        width: 100%;
+        /* overflow: hidden; */
+        box-sizing: border-box;
+
+        &:hover {
+          img {
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+          }
+        }
+        
         img {
+          transition: transform 0.3s ease;
           border: calc(2*var(--border-width)) solid var(--border-color);
           border-radius: 16px;
           width: 100%;
@@ -28,6 +39,7 @@
         }
         hgroup>p {
           display: flex;
+          flex-wrap: wrap;
           gap: 8px;
         }
       }
@@ -43,20 +55,20 @@
       </button>
       <ul>
         <li><a href="home.html">Home</a></li>
-        <li><a href="about_me.html">About me</a></li>
+        <!-- <li><a href="about_me.html">About me</a></li> -->
         <li><a href="experiment.html">Experiments</a></li>
       </ul>
     </nav>
 
     <div class="content">
-      <header>
+      <header data-page="home">
         <h1>Alex is a product designer. Blah Blah.</h1>
       </header>
 
       <main>
         <section id="summer-2025-internship">
           <h2 class="supporting-text">Summer 2025 Internship</h2>
-          <div class="flex-container">
+          <div>
             <a href="storybook_case_study.html" class="flex-item">
               <article>
                 <img src="/images/home/StorybookThumb.png" alt="storybook documentation of Arity color palette" width="400" >
@@ -79,7 +91,7 @@
         </section>
         <section id="previous-work">
           <h2 class="supporting-text">Previous Work</h2>
-          <div class="flex-container">
+          <div>
             <article class="flex-item">
               <img src="/images/home/D4SDThumb.png" alt="Design for San Diego website homepage picture" width="400">
               <hgroup>
@@ -87,7 +99,7 @@
                 <p><span>#VisualDesign</span><span>#BrandStrategy</span><span>#CrossFunctional</span></p>
               </hgroup>
             </article>
-            <a href="yfm_case_study.html" class="flex-item">
+            <a class="flex-item">
               <article>
                 <img src="/images/home/YFMThumb.png" alt="Youth Futures Movement nonprofit homepage picture" width="400">
                 <hgroup>
