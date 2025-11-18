@@ -13,7 +13,10 @@ let formErrors = [];
 
 function showError(errorMsg, infoMsg) {
     errorOutput.value = errorMsg;
+    errorOutput.classList.add("error-highlight");
     infoOutput.value = infoMsg;
+    infoOutput.classList.add("info-highlight");
+
 
     // Clear any previous timeout so messages don't overlap
     clearTimeout(errorTimeout);
@@ -21,7 +24,9 @@ function showError(errorMsg, infoMsg) {
     // Make the messages disappear after 2 seconds
     errorTimeout = setTimeout(() => {
         errorOutput.value = "";
+        errorOutput.classList.remove("error-highlight");
         infoOutput.value = "";
+        infoOutput.classList.remove("info-highlight");
     }, 2000);
 }
 
