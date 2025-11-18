@@ -3,7 +3,8 @@
 html {
     font-family: var(--font-family, 'Roboto', 'sans-serif');
 }
-h1, h2, h3, p, em {
+
+h1, h2, h3, p, em, a {
     color: var(--text-color,#121313);
 }
 
@@ -36,10 +37,6 @@ p {
 
 em {
     font-style: normal;
-}
-
-a {
-    color: inherit;
 }
 
 .white-text {
@@ -82,14 +79,21 @@ a {
     scrollbar-color: var(--border-color,#121313) transparent;
 }
 
-span.highlight {
-font-weight: bolder;
-background: linear-gradient(104deg, rgba(130, 255, 173,0) 0.9%, rgba(130, 255, 173, 1.25) 2.4%, rgba(130, 255, 173,0.5) 5.8%, rgba(130, 255, 173,0.1) 93%, rgba(130, 255, 173,0.7) 96%, rgba(130, 255, 1732,0) 98%), linear-gradient(183deg, rgba(130, 255, 173,0) 0%, rgba(130, 255, 173,0.3) 7.9%, rgba(130, 255, 173,0) 15%);
-padding: 0.6em 13.7px;
-box-decoration-break: clone;
--webkit-box-decoration-break: clone;
-margin: 0;
-border-radius: 7.5px;
-text-shadow: -12px 12px 9.8px rgba(130, 255, 173,0.7), 21px -18.1px 7.3px rgba(255, 255, 255,1), -18.1px -27.3px 30px rgba(255, 255, 255,1);
+.error-highlight {
+    background: linear-gradient(104deg, rgba(218, 134, 147,0) 0.9%, rgba(196, 62, 82, 0.2) 2.4%, rgba(235, 139, 154, 0.5) 5.8%, rgba(128, 55, 66, 0.1) 93%, rgba(231, 55, 84, 0.7) 96%, rgba(218, 134, 147,0) 98%), linear-gradient(183deg, rgba(218, 134, 147,0) 0%, rgba(218, 134, 147,0.3) 7.9%, rgba(218, 134, 147,0) 15%);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    margin: 0;
+    border-radius: 7.5px;
+    text-shadow: -12px 12px 9.8px rgba(218, 134, 147,0.7), 21px -18.1px 7.3px rgba(255, 255, 255,1), -18.1px -27.3px 30px rgba(255, 255, 255,1);
+}
+
+.info-highlight {
+    background: linear-gradient(104deg, rgba(6, 152, 60, 0) 0.9%, rgba(158, 239, 6, 0.8) 2.4%, rgba(166, 248, 15, 0.5) 5.8%, rgba(62, 138, 89, 0.1) 93%, rgba(189, 218, 134, 0.8) 96%, rgba(130, 255, 1732,0) 98%), linear-gradient(183deg, rgba(130, 255, 173,0) 0%, rgba(118, 175, 13, 0.3) 7.9%, rgba(130, 255, 173,0) 15%);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    margin: 0;
+    border-radius: 7.5px;
+    text-shadow: -12px 12px 9.8px var(--system-info-color), 21px -18.1px 7.3px rgba(255, 255, 255,1), -18.1px -27.3px 30px rgba(255, 255, 255,1);
 }
   
