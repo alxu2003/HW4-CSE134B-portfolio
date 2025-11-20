@@ -16,6 +16,7 @@
     --font-size-base: 1rem;
     --width-spacing-unit: 1.6dvw;
     --height-spacing-unit: 1.6dvh;
+    --nav-short-end-size: calc(2* var(--width-spacing-unit,1.6dvw));
 
     @font-face {
         font-family: 'Roboto';
