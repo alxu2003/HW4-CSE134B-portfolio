@@ -24,18 +24,25 @@ themeSwitch.addEventListener('input', () => {
 })  
 
 function openNav() {
-  document.getElementById("navbar").style.width = "250px";
+  document.getElementById("navbar").style.width = "500px";
 }
 
 function closeNav() {
-  const navbar = document.getElementById('navbar');
-  const navComputedStyle = window.getComputedStyle(navbar);
-  const originalWidth = navComputedStyle.getPropertyValue('--nav-short-end-size');
-  document.getElementById("navbar").style.setProperty('width', originalWidth);
+//   
+  document.getElementById("navbar").style.setProperty('width', '250px');
 }
 
 function openCloseNav() {
-    navSwitch.checked ? closeNav() : openNav();
+    navSwitch.checked ? openNav() : closeNav();
 }
 
-navSwitch.addEventListener('input', openCloseNav());
+navSwitch.addEventListener('input', () => {
+    if (navSwitch.checked) {
+        document.getElementById("navbar").style.width = "500px";
+    }
+    else {
+        const rootComputedStyle = window.getComputedStyle(document.documentElement);
+        const originalWidth = rootComputedStyle.getPropertyValue('--nav-short-end-size');
+        document.getElementById("navbar").style.setProperty('width', originalWidth);
+    }
+})
