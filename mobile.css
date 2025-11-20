@@ -14,7 +14,7 @@ body {
     background-color: var(--bg-color,#F9FBFF);
     writing-mode: horizontal-tb;
     
-    .navbar {
+    #navbar {
         height: auto;
         width: 100vw;
         border: var(--border-width,0.5px) solid var(--border-color,#121313);
