@@ -1,6 +1,7 @@
 let darkmode = localStorage.getItem('darkmode');
 let checked = localStorage.getItem('checked');
 const themeSwitch = document.getElementById('theme-check');
+const navSwitch = document.getElementById('nav-check');
 
 const enableDarkMode = () => {
     document.body.classList.add('darkmode');
@@ -21,3 +22,20 @@ themeSwitch.addEventListener('input', () => {
     darkmode != 'active' ? enableDarkMode() : disableDarkMode();
     checked != 'active' ? themeSwitch.checked = true : themeSwitch.checked = false;
 })  
+
+function openNav() {
+  document.getElementById("navbar").style.width = "250px";
+}
+
+function closeNav() {
+  const navbar = document.getElementById('navbar');
+  const navComputedStyle = window.getComputedStyle(navbar);
+  const originalWidth = navComputedStyle.getPropertyValue('--nav-short-end-size');
+  document.getElementById("navbar").style.setProperty('width', originalWidth);
+}
+
+function openCloseNav() {
+    navSwitch.checked ? closeNav() : openNav();
+}
+
+navSwitch.addEventListener('input', openCloseNav());
