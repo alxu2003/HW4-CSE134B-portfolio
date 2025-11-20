@@ -73,11 +73,6 @@ em {
     flex: 1;
 }
 
-.scroller {
-    scrollbar-width: thin;
-    scrollbar-gutter: stable;
-    scrollbar-color: var(--border-color,#121313) transparent;
-}
 
 .error-highlight {
     background: linear-gradient(104deg, rgba(218, 134, 147,0) 0.9%, rgba(196, 62, 82, 0.2) 2.4%, rgba(235, 139, 154, 0.5) 5.8%, rgba(128, 55, 66, 0.1) 93%, rgba(231, 55, 84, 0.7) 96%, rgba(218, 134, 147,0) 98%), linear-gradient(183deg, rgba(218, 134, 147,0) 0%, rgba(218, 134, 147,0.3) 7.9%, rgba(218, 134, 147,0) 15%);
